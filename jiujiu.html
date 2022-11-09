@@ -1,0 +1,42 @@
+<!doctype html>
+<html  lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>1~9の二重ループで作成するについて</title>
+ <link rel="stylesheet" href="jiujiu.css">
+
+  </head>
+  <body>
+
+   <h1>九九の表</h1>    
+<script>
+   document.write("<table>");
+    
+    document.write("<tr>")
+        document.write("<th> </th>");
+    for(m =1;m<10;m++){
+        document.write("<th>"+m+"</th>");
+    }
+    document.write("</tr>")
+
+    for (i = 1; i <= 9; i++) {
+        document.write("<tr>");
+            document.write("<th>"+i+"</th>");
+        var kei = 0;
+        for (j = 1; j <= 9; j++) {
+            kei = i * j;
+            if(kei%2==0){
+            document.write("<td>"+kei+"</td>");
+        }else{
+             document.write("<td class='kb'>"+kei+"</td>");
+            }
+           
+        }
+        document.write("</tr>");
+       
+    }
+   document.write("</table>");
+</script>
+</table>
+  </body>
+</html>
